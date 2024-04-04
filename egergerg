@@ -1,0 +1,16 @@
+local library = require(game:GetService("ReplicatedStorage").imguilib) 
+
+local imgui = library.new("IMGUI")
+
+imgui:FadeIn(0.5) -- fade in over 0.5 seconds
+
+imgui.Draggable = true 
+
+local page = imgui:AddPage("Page")
+local section = page:AddSection("Section")
+
+section:AddButton("Button", function()
+  print("Button clicked!") 
+end)
+
+imgui:Init()
